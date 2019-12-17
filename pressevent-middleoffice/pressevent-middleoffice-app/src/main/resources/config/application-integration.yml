@@ -1,0 +1,40 @@
+logging:
+  #path: /vo-portail/logs
+spring:
+  mail: 
+    host: ssl0.ovh.net
+    username: preprod.vo-noreply@clemenceconsulting.fr
+    password: LowbuvErch9
+    properties: 
+      mail:
+        debug: true
+  flyway:
+    adminvo:
+      enabled: true
+      user: itpeacadmin
+      password: kxv32PU$
+      url: 
+      locations: db/migration/postgres
+      placeholder-prefix: _o
+      placeholder-suffix: _o
+      schemas: public
+
+datasources:  
+  adminvo: 
+    url: 
+    username: 
+    password: 
+    driver-class-name: org.postgresql.Driver
+    platform: h2 
+  # DB_CLOSE_DELAY=-1  
+  
+application:
+  projet:
+    environnement: development
+  cors:
+    allowed-origins: "*"
+    allowed-methods: "*"
+    allowed-headers: "*"
+    exposed-headers: "*"
+    allow-credentials: true
+    max-age: 1800

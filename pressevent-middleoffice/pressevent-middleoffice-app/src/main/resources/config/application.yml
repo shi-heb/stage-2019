@@ -1,0 +1,48 @@
+# ===================================================================
+# Spring Boot configuration.
+#
+# This configuration will be overridden by the Spring profile you use,
+# for example application-dev.yml if you use the "dev" profile.
+#
+# ===================================================================
+
+server:
+  http2:
+    enabled: true
+  port: 8087
+  servlet:
+    context-path: #application.context-path#
+    
+
+spring: 
+  datasource:
+    initialization-mode: never
+
+  application:
+    name: #project.name#
+  mvc: 
+    favicon: 
+      enabled: false  
+  profiles: 
+    active: #spring.profiles.active#
+  flyway:
+    enabled: false
+
+datasources: 
+  pressevent: 
+    jdbcUrl: jdbc:postgresql://localhost:5432/pressevent
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+    
+application:
+  projet:
+    application-name: #project.name#
+    application-version: #project.version#
+  cors: 
+    allowed-origins: "*"
+    allowed-methods: "*"
+    allowed-headers: "*"
+    exposed-headers: "Authorization"
+    allow-credentials: true
+    max-age: 1800

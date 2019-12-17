@@ -1,0 +1,31 @@
+logging:
+  #path: /vo-portail/logs
+spring:
+  mvc: 
+    favicon: 
+      enabled: false  
+  h2: 
+    console:
+      enabled: false
+  mail: 
+    host: ssl0.ovh.net
+    username: vo-noreply@clemenceconsulting.fr
+    password: LowbuvErch9
+    properties: 
+      mail:
+        debug: false
+  flyway:
+    adminvo:
+      enabled: true
+      user: itpeacadmin
+      password: kxv32PU$
+      url: 
+      locations: db/migration/postgres
+      placeholder-prefix: _o
+      placeholder-suffix: _o
+      schemas: public
+
+   
+application:
+  projet:
+    environnement: production

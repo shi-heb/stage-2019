@@ -1,0 +1,20 @@
+spring: 
+  flyway:
+    adminvo:
+      enabled: true
+      user: postgres
+      password: postgres
+      url: 
+      locations: db/migration/adminvo/postgres
+      placeholder-prefix: _o
+      placeholder-suffix: _o
+      schemas: public
+datasources: 
+  pressevent: 
+    jdbcUrl: jdbc:postgresql://localhost/pressevent
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver        
+application:
+  projet:
+    environnement: development
